@@ -25,7 +25,7 @@ A React JS application for retrieving SteamIDs in batch by inputting Steam profi
 
 # Known issues: 
 
-1. Written in JavaScript
+1. Written in JavaScript (hard to justify and too lazy to convert it to TypeScript tbh).
 2. No Error handling behavior was defined.
 
 
@@ -33,7 +33,7 @@ A React JS application for retrieving SteamIDs in batch by inputting Steam profi
 
 ## Is there an online version?
 
-No. I don't consider the effort required to setup a backend to handle CORS requests worthy. So I have no plans for an online demo or Vercel deployment.
+No. I don't consider the effort required to setup a backend to handle CORS requests worthy. So I have no plans for an online demo or Vercel/Netlify deployment and I advise against it.
 
 ## How can I fetch Blocked Users' links?
 
