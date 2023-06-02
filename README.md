@@ -1,6 +1,6 @@
 # Batch SteamID Retriever
 
-A web application for retrieving SteamIDs in batch by inputting Steam profile URLs (/profiles/permalink) or Steam id URLs (/id/username). The project aims to simplify the process of converting Steam profile URLs or SteamID64s (which is what profile links use) to the SteamID format (STEAM_X:Y:Z). It provides a user-friendly interface where users can enter multiple profile URLs or IDs and obtain the corresponding SteamIDs for further use.
+A React JS application for retrieving SteamIDs in batch by inputting Steam profile URLs (/profiles/permalink) or Steam id URLs (/id/username). The project aims to simplify the process of converting Steam profile URLs or SteamID64s (which is what profile links use) to the SteamID format (STEAM_X:Y:Z). It provides a user-friendly interface where users can enter multiple profile URLs or IDs and obtain the corresponding SteamIDs for further use.
 
 ## Functionality
 
@@ -8,20 +8,26 @@ A web application for retrieving SteamIDs in batch by inputting Steam profile UR
 - Fetch SteamIDs: Upon submitting the form, the application retrieves the SteamIDs for the entered URLs or IDs using the Steam API.
 - Copy/Ban SteamIDs: Users can copy the retrieved SteamIDs to the clipboard with a single click. The application provides separate buttons to copy the SteamIDs only, as well as the SteamIDs formatted for the ```banned_user.cfg``` file.
 - Limitations: To prevent rate limits on the Steam API, only the first 100 SteamIDs are processed. If more than 100 URLs or IDs are entered, a warning message is displayed and once the first 100 are processed, they are removed from the input field. The remaining SteamIDs are preserved in the input field for further processing.
-- Self-hosting: Due to security concerns related to the hardcoded API key and the use of a CORS proxy, it is recommended to host the application locally or on a trusted server. This app uses a CORS proxy hosted on Heroku. [Request access to the demo CORS proxy here or it won't work.](https://cors-anywhere.herokuapp.com/).
+- Self-hosting: Due to security concerns related to the use of a CORS proxy, it is recommended to host the application locally or on a trusted server. This app uses CORS Anywhere, hosted on Heroku. [Request access to the demo CORS proxy here or it won't work.](https://cors-anywhere.herokuapp.com/).
 
 ## Usage
 
-1. Clone the repository: ```git clone https://github.com/yourusername/batch-steamid-retriever.git```
+1. Clone the repository: ```git clone https://github.com/TestieTendie/Batch-Steamid-Retriever.git```
 2. Install dependencies: ```npm install```
 3. Create a ./.env file and place your [Steam API Key](https://steamcommunity.com/dev/apikey) in it as follows: ```VITE_STEAM_API_KEY=123456789```
 4. Start the application: ```npm run dev```
 5. Access the application in your browser: ```http://localhost:5173```
 6. Enter the Steam profile URLs or SteamID64s in the provided text area.
 7. Click "Get Steam IDs" to retrieve the corresponding SteamIDs.
-8. Use the "Copy" and "Copy for Ban" buttons to copy the SteamIDs as needed.
+8. Use the "Copy" and "Copy for Ban" buttons to copy the SteamIDs formatted as needed.
 
-**Note:** You NEED to request access to [CORS Anywhere](https://cors-anywhere.herokuapp.com/). This allows the application to fetch data from the Steam API successfully. Failure to do so will impede the application from funtioning at all.
+**Note:** You **NEED** to request access to [CORS Anywhere](https://cors-anywhere.herokuapp.com/). This allows the application to fetch data from the Steam API successfully. Failure to do so will impede the application from functioning at all when inputting /id URLs.
+
+# Known issues: 
+
+1. Written in JavaScript
+2. No Error handling behavior was defined.
+
 
 # Extras/FAQ
 
